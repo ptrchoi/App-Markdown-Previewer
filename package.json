@@ -10,6 +10,8 @@
 	"author": "Peter Choi",
 	"license": "ISC",
 	"dependencies": {
+		"firebase": "^7.12.0",
+		"firebase-tools": "^7.16.1",
 		"marked": "^0.8.2",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1"
