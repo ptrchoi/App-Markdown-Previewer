@@ -1,0 +1,14 @@
+.preview-container {
+  background: $near-white;
+  color: $near-black;
+  height: 1000px;
+  padding: $box-padding;
+  min-width: $width-fixed;
+  max-width: $width-fixed;
+}
+.preview-header {
+  background: $blue;
+  color: $near-white;
+  margin-top: $top-margin;
+  padding: 10px 16px;
+}
