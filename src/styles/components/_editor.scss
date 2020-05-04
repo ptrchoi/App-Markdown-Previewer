@@ -1,15 +1,15 @@
 .editor-container {
-  background: $gray;
-  color: $dark-purple;
-  font-size: 0.75rem;
-  height: 200px;
-  padding: $box-padding;
-  min-width: $width-fixed;
-  max-width: $width-fixed;
+	background: $editor-bg;
+	color: $editor-bg-text;
+	font-size: 0.75rem;
+	height: 300px;
+	padding: $box-padding;
+	min-width: $width-fixed;
+	max-width: $width-fixed;
 }
 .editor-header {
-  background: $purple;
-  color: $near-white;
-  margin-top: $top-margin;
-  padding: 10px 16px;
+	background: $editor-header;
+	color: $editor-header-text;
+	margin-top: $top-margin;
+	padding: 10px 16px;
 }

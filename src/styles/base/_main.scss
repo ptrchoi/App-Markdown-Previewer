@@ -3,25 +3,25 @@ div,
 h1,
 h3,
 textarea {
-  box-sizing: border-box;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 .main-container {
-  background-color: $light-blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	background-color: $main-bg;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .main-item {
-  margin: auto;
+	margin: auto;
 }
 .arrow-div {
-  text-align: center;
+	text-align: center;
 }
 .arrow-icon {
-  color: $purple;
-  font-size: 2.5rem;
-  margin-top: 10px;
+	color: $arrow;
+	font-size: 2.5rem;
+	margin-top: 10px;
 }
