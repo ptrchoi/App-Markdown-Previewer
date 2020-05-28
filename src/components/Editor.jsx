@@ -44,15 +44,15 @@ if (test === true) {
 	}
 	render() {
 		return (
-			<div>
+			<div className="editor-wrapper">
 				<h3 className="editor-header">
-					<i class="far fa-edit" /> Editor (Github flavored)
+					<i className="far fa-edit" /> Editor (Github flavored)
 				</h3>
 				<textarea
 					id="editor"
 					ref="inputText"
 					value={this.props.input}
-					className="editor-container"
+					className="editor-body"
 					onChange={this.handleChange}
 					defaultValue={this.state.defaultText}
 				/>

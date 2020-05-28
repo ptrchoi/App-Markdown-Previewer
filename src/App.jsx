@@ -31,17 +31,10 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="main-container">
-				<header>
-					<h1 className="title">
-						<i class="far fa-edit" /> Markdown Editor
-					</h1>
-				</header>
-				<div className="main-item">
+				<div className="window">
 					<Editor onInput={this.handleInput} />
-					<div className="arrow-div">
-						<i class="fas fa-arrow-circle-down arrow-icon" />
-						{/* <i className="fas fa-angle-double-down arrow-icon" /> */}
-					</div>
+				</div>
+				<div className="window">
 					<Preview markedText={this.state.markedText} />
 				</div>
 			</div>

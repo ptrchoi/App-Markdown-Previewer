@@ -4,11 +4,11 @@ class Preview extends React.Component {
 	render() {
 		const { markedText } = this.props;
 		return (
-			<div>
+			<div className="preview-wrapper">
 				<h3 className="preview-header">
-					<i class="far fa-eye" /> Live Preview
+					<i className="far fa-eye" /> Live Preview
 				</h3>
-				<div id="preview" dangerouslySetInnerHTML={{ __html: markedText }} className="preview-container" />
+				<div id="preview" dangerouslySetInnerHTML={{ __html: markedText }} className="preview-body" />
 			</div>
 		);
 	}

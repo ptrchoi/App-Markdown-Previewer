@@ -1,14 +1,25 @@
-.preview-container {
-	background: $preview-bg;
-	color: $preview-bg-text;
-	height: 1000px;
-	padding: $box-padding;
-	min-width: $width-fixed;
-	max-width: $width-fixed;
+.preview-wrapper {
+	height: 50vh;
+	position: absolute;
+	top: 50%;
+	width: 100%;
 }
 .preview-header {
 	background: $preview-header;
 	color: $preview-header-text;
-	margin-top: $top-margin;
-	padding: 10px 16px;
+}
+.preview-body {
+	background: $preview-bg;
+	color: $preview-bg-text;
+	height: 100%;
+	width: 100%;
+}
+@media screen and (orientation: landscape) {
+	.preview-wrapper {
+		height: 100vh;
+		left: 50%;
+		position: absolute;
+		top: 0;
+		width: 50%;
+	}
 }
