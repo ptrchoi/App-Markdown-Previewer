@@ -1,21 +1,35 @@
 .editor-wrapper {
-	height: 50vh;
+	// border: solid 1px red;
+	height: 44vh;
 	width: 100%;
+	padding: 20px 20px 0 20px;
 }
 .editor-header {
-	background: $editor-header;
-	color: $editor-header-text;
+	@include fluid-type(padding-left, 300px, 1200px, 4px, 16px);
+	@include fluid-type(padding-bottom, 300px, 1200px, 2px, 12px);
+	@include fluid-type(padding-top, 300px, 1200px, 5px, 20px);
+
+	background-color: rgba(100, 150, 150, .3);
+	border: solid 1px black;
+	color: black;
 }
 .editor-body {
+	@include fluid-type(padding, 300px, 1200px, 6px, 16px);
+	// @include fluid-type(font-size, 300px, 1200px, 10px, 30px);
 	background: $editor-bg;
+	border: solid 1px black;
 	color: $editor-bg-text;
 	font-size: 0.75rem;
 	height: 100%;
 	width: 100%;
 }
+textarea {
+	resize: none;
+}
 @media screen and (orientation: landscape) {
 	.editor-wrapper {
-		height: 100vh;
+		height: 90vh;
+		padding: 20px 0 0 20px;
 		width: 50%;
 	}
 }

@@ -5,7 +5,7 @@ import marked from 'marked';
 import Editor from './Components/Editor';
 import Preview from './Components/Preview';
 
-import './styles/app.scss';
+import './styles/index.scss';
 
 class App extends React.Component {
 	constructor(props) {
