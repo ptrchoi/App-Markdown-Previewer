@@ -30,12 +30,17 @@ class App extends React.Component {
 	}
 	render() {
 		return (
-			<div className="main-container">
-				<div className="window">
-					<Editor onInput={this.handleInput} />
+			<div className="app-container">
+				<div className="title-container">
+					<h1>Real-time Markdown Editor</h1>
 				</div>
-				<div className="window">
-					<Preview markedText={this.state.markedText} />
+				<div className="components-container">
+					<div className="window">
+						<Editor onInput={this.handleInput} />
+					</div>
+					<div className="window">
+						<Preview markedText={this.state.markedText} />
+					</div>
 				</div>
 			</div>
 		);

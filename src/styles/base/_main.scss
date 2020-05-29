@@ -38,10 +38,8 @@ textarea {
 		}
 	}
 }
-
-.main-container {
-	// background-color: $main-bg;
-	background-color: #fff;
+.app-container {
+	background-color: white;
 	display: block;
 	height: 100vh;
 	left: 50%;
@@ -49,4 +47,20 @@ textarea {
 	transform: translate(-50%, 0%);
 	width: 100%;
 	max-width: 1200px;
+}
+.title-container {
+	height: 10%;
+	text-align: center;
+	padding: 1rem;
+	h1 {
+		font-family: 'Quicksand', Helvetica, sans-serif;
+	}
+}
+.components-container {
+	height: 90%;
+	position: relative;
+	width: 100%;
+}
+.header-icon {
+	padding: 0 .75em 0 .75em;
 }
