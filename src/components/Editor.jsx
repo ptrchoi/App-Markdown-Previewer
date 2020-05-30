@@ -3,15 +3,21 @@ import React from 'react';
 class Editor extends React.Component {
 	constructor(props) {
 		super(props);
-		const exampleText = `### MARKDOWN EXAMPLES:
+		const exampleText = `### Github Flavored Markdown:
+## h2 header
+### h3 header
+
+- Example list
+  - An item
+  - Another item
+
+**Bold Text**
+
+<a href="https://www.ptrchoi.com" target=_blank>link in a new tab</a>
+[regular link](https://www.ptrchoi.com)
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
     
-# h1 header
-## h2 header
-<a href="https://www.freecodecamp.com" target=_blank>link in a new tab</a>
-[regular link](https://www.freecodecamp.com)
-
 \`//inline code\`
 \` value > 0 ? count++ : count-- \`
     
@@ -22,12 +28,7 @@ if (test === true) {
 }
 \`\`\`
     
-> Block Quote
-- My list
-  - An item
-  - Another item
-
-**Bold Text**`;
+> Block Quote`;
 
 		this.state = {
 			defaultText: exampleText
@@ -47,7 +48,7 @@ if (test === true) {
 			<div className="editor-container">
 				<div className="editor">
 					<h3 className="editor-header">
-						<i className="far fa-edit header-icon" /> Editor (Github flavored)
+						<i className="far fa-edit header-icon" /> Editor
 					</h3>
 					<textarea
 						id="editor"
