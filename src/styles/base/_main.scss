@@ -50,25 +50,20 @@ textarea {
 }
 .title-container {
 	display: flex;
-	height: 6%;
-	text-align: center;
+	height: 8%;
+	align-items: center;
 	padding: 1rem;
 	h1 {
+		@include fluid-type(font-size, 300px, 1200px, 32px, 38px);
 		font-family: 'Quicksand', Helvetica, sans-serif;
 	}
 	.app-logo {
 		font-size: 4rem;
 		padding: 0 .5em 0 .25em;
-		// justify-self: start;
-	}
-	.app-title {
-		// justify-self: flex-end;
-		@include fluid-type(font-size, 300px, 1200px, 24px, 34px);
-		padding-top: .5em;
 	}
 }
 .components-container {
-	height: 94%;
+	height: 92%;
 	position: relative;
 	width: 100%;
 }
@@ -78,9 +73,15 @@ textarea {
 
 @media screen and (orientation: landscape) {
 	.title-container {
-		height: 15%;
+		h1 {
+			@include fluid-type(font-size, 300px, 1200px, 18px, 30px);
+		}
+		.app-logo {
+			font-size: 3rem;
+		}
+		height: 14%;
 	}
 	.components-container {
-		height: 85%;
+		height: 86%;
 	}
 }

@@ -33,9 +33,9 @@ class App extends React.Component {
 			<div className="app-container">
 				<div className="title-container">
 					<h1 className="app-logo">
-						<i class="fab fa-markdown" />
+						<i className="fab fa-markdown" />
 					</h1>
-					<h1 className="app-title">Real-time Markdown Editor</h1>
+					<h1 className="app-title">Markdown : Real-time Editor</h1>
 				</div>
 				<div className="components-container">
 					<div className="window">
