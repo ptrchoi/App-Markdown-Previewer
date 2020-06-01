@@ -70,16 +70,23 @@ if (test === true) {
 	componentDidMount() {
 		this.props.onInput(this.state.defaultText);
 	}
-	handleChange(e) {
-		e.preventDefault();
-		this.props.onInput(this.refs.inputText.value);
+	handleChange(e, resetContent = null) {
+		let input = this.refs.inputText.value;
+
+		// If resetContent, pass in reset content
+		if (resetContent !== null) input = resetContent;
+
+		this.props.onInput(input);
 	}
 	copyContent() {
 		$('#editor')[0].select();
 		document.execCommand('copy');
 	}
 	resetContent() {
-		$('#editor')[0].value = this.state.defaultText;
+		let content = this.state.defaultText;
+
+		$('#editor')[0].value = content;
+		this.handleChange(null, content);
 	}
 	clearContent() {
 		$('#editor')[0].select();
@@ -91,15 +98,17 @@ if (test === true) {
 				<div className="editor">
 					<h3 className="editor-header">
 						<i className="far fa-edit header-icon" /> Editor
-						<button id="copyBtn" className="appButton " onClick={this.copyContent}>
-							<i className="fa fa-copy" />
-						</button>
-						<button id="resetBtn" className="appButton " onClick={this.resetContent}>
-							<i className="fas fa-info-circle" />
-						</button>
-						<button id="clearBtn" className="appButton " onClick={this.clearContent}>
-							<i className="far fa-trash-alt" />
-						</button>
+						<div className="button-container">
+							<button id="clearBtn" className="editor-button" onClick={this.clearContent}>
+								<i className="far fa-file" /> <span className="button-label">clear</span>
+							</button>
+							<button id="copyBtn" className="editor-button" onClick={this.copyContent}>
+								<i className="far fa-copy" /> <span className="button-label">copy</span>
+							</button>
+							<button id="resetBtn" className="editor-button" onClick={this.resetContent}>
+								<i className="fas fa-history" /> <span className="button-label">reset</span>
+							</button>
+						</div>
 					</h3>
 					<textarea
 						id="editor"

@@ -22,6 +22,18 @@
 	flex-direction: row;
 	align-items: center;
 }
+.button-container {
+	position: absolute;
+	right: 8%;
+}
+.editor-button {
+	@include fluid-type(padding-left, 300px, 1200px, 4px, 24px);
+
+	background-color: transparent;
+	border: none;
+	color: rgb(252, 77, 53);
+	font-size: 1.1rem;
+}
 .editor-body {
 	@include fluid-type(font-size, 300px, 1200px, 10px, 14px);
 	@include fluid-type(padding, 300px, 1200px, 6px, 16px);
@@ -35,12 +47,27 @@ textarea {
 	border: none;
 	resize: none;
 }
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) and (orientation: landscape) {
+	.editor-header {
+		font-size: 1rem;
+	}
+	.editor-button {
+		font-size: .4rem;
+	}
+	// Hide button labels to fit in narrow landscape view
+	.button-label {
+		display: none;
+	}
+}
+@media only screen and (max-width: 600px) {
 	.editor-header {
 		font-size: 1.2rem;
 	}
+	.editor-button {
+		font-size: .6rem;
+	}
 }
-@media screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
 	.editor-container {
 		height: 95%;
 		padding: 20px 0 0 20px;
@@ -54,6 +81,9 @@ textarea {
 	.editor-header {
 		font-size: 1.3rem;
 		height: 10%;
+	}
+	.editor-button {
+		font-size: .8rem;
 	}
 	.editor-body {
 		height: 90%;
