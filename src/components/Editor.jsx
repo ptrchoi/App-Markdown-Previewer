@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 class Editor extends React.Component {
 	constructor(props) {
@@ -64,6 +65,7 @@ if (test === true) {
 		};
 
 		this.handleChange = this.handleChange.bind(this);
+		this.resetContent = this.resetContent.bind(this);
 	}
 	componentDidMount() {
 		this.props.onInput(this.state.defaultText);
@@ -72,12 +74,32 @@ if (test === true) {
 		e.preventDefault();
 		this.props.onInput(this.refs.inputText.value);
 	}
+	copyContent() {
+		$('#editor')[0].select();
+		document.execCommand('copy');
+	}
+	resetContent() {
+		$('#editor')[0].value = this.state.defaultText;
+	}
+	clearContent() {
+		$('#editor')[0].select();
+		document.execCommand('delete');
+	}
 	render() {
 		return (
 			<div className="editor-container">
 				<div className="editor">
 					<h3 className="editor-header">
 						<i className="far fa-edit header-icon" /> Editor
+						<button id="copyBtn" className="appButton " onClick={this.copyContent}>
+							<i className="fa fa-copy" />
+						</button>
+						<button id="resetBtn" className="appButton " onClick={this.resetContent}>
+							<i className="fas fa-info-circle" />
+						</button>
+						<button id="clearBtn" className="appButton " onClick={this.clearContent}>
+							<i className="far fa-trash-alt" />
+						</button>
 					</h3>
 					<textarea
 						id="editor"
