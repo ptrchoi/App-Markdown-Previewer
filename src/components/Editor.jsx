@@ -3,32 +3,61 @@ import React from 'react';
 class Editor extends React.Component {
 	constructor(props) {
 		super(props);
-		const exampleText = `### Github Flavored Markdown:
-## h2 header
-### h3 header
+		const exampleText = `## What is Github Flavored Markdown?
+Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters.
 
-- Example list
-  - An item
-  - Another item
+Github Flavored Markdown can be used on Github for:
+- Readme Files with the .md or .markdown extension
+- Comments in Issues and Pull Requests
+- Gists
 
-**Bold Text**
 
-<a href="https://www.ptrchoi.com" target=_blank>link in a new tab</a>
-[regular link](https://www.ptrchoi.com)
+## Syntax Guide:
 
-![React Logo w/ Text](https://goo.gl/Umyytc)
-    
-\`//inline code\`
+### Headers
+# This is an 'h1' tag
+## This is an 'h2' tag
+###### This is an 'h6' tag
+
+### Emphasis
+*This text will be italic*
+_This will also be italic_
+
+**This text will be bold**
+__This will also be bold__
+
+_You **can** combine them_
+
+### Lists
+#### Unordered
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+
+#### Ordered
+1. Item 1
+1. Item 2
+1. Item 3
+	1. Item 3a
+	1. Item 3b
+
+### Images
+<img src="https://goo.gl/Umyytc" width="240" height="240">
+
+### Links
+<a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf" target=_blank>Click to find out more</a>
+
+### Inline Code
 \` value > 0 ? count++ : count-- \`
     
+
+### Multi-line code block
 \`\`\`
-//multi-line code block
 if (test === true) {
   return 'success';
 }
-\`\`\`
-    
-> Block Quote`;
+\`\`\``;
 
 		this.state = {
 			defaultText: exampleText

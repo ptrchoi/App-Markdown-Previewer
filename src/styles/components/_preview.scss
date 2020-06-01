@@ -23,7 +23,7 @@
 	align-items: center;
 }
 .preview-body {
-	@include fluid-type(font-size, 300px, 1200px, 12px, 28px);
+	@include fluid-type(font-size, 300px, 1200px, 10px, 20px);
 	@include fluid-type(padding, 300px, 1200px, 6px, 16px);
 
 	background: white;
