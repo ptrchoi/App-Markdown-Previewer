@@ -35,7 +35,7 @@ class App extends React.Component {
 					<h1 className="app-logo">
 						<i className="fab fa-markdown" />
 					</h1>
-					<h1 className="app-title">Markdown : Real-time Editor</h1>
+					<h1 className="app-title">Markdown : Real-time Previewer</h1>
 				</div>
 				<div className="components-container">
 					<div className="window">

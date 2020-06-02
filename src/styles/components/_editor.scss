@@ -14,32 +14,47 @@
 	width: 100%;
 }
 .editor-header {
+	align-items: center;
 	border-bottom: solid 1px rgb(252, 77, 53);
 	color: rgb(252, 77, 53);
 	display: flex;
-	font-size: 2rem;
-	height: 15%;
 	flex-direction: row;
+	height: 15%;
+}
+.editor-title {
 	align-items: center;
+	display: flex;
+	flex-direction: row;
+	font-size: 2rem;
+	width: 40%;
 }
 .button-container {
-	position: absolute;
-	right: 8%;
+	align-items: center;
+	display: flex;
+	flex-direction: row-reverse;
+	width: 60%;
 }
 .editor-button {
 	@include fluid-type(padding-left, 300px, 1200px, 4px, 24px);
 
+	align-items: center;
 	background-color: transparent;
 	border: none;
 	color: rgb(252, 77, 53);
-	font-size: 1.1rem;
+	display: flex;
+	flex-direction: row;
+	font-size: 1.2rem;
+
+	.button-label {
+		padding-left: 5px;
+	}
 }
 .editor-body {
 	@include fluid-type(font-size, 300px, 1200px, 10px, 14px);
 	@include fluid-type(padding, 300px, 1200px, 6px, 16px);
+
 	background: none;
 	color: rgb(104, 157, 179);
-	// font-size: 1em;
 	height: 85%;
 	width: 100%;
 }
@@ -47,24 +62,12 @@ textarea {
 	border: none;
 	resize: none;
 }
-@media only screen and (max-width: 700px) and (orientation: landscape) {
-	.editor-header {
-		font-size: 1rem;
-	}
-	.editor-button {
-		font-size: .4rem;
-	}
-	// Hide button labels to fit in narrow landscape view
-	.button-label {
-		display: none;
-	}
-}
 @media only screen and (max-width: 600px) {
-	.editor-header {
-		font-size: 1.2rem;
+	.editor-title {
+		font-size: .9rem;
 	}
 	.editor-button {
-		font-size: .6rem;
+		font-size: .65rem;
 	}
 }
 @media only screen and (orientation: landscape) {
@@ -79,13 +82,32 @@ textarea {
 		padding-right: .75rem;
 	}
 	.editor-header {
-		font-size: 1.3rem;
 		height: 10%;
 	}
+	.editor-title {
+		font-size: 1.1rem;
+	}
 	.editor-button {
-		font-size: .8rem;
+		font-size: .7rem;
 	}
 	.editor-body {
 		height: 90%;
+	}
+}
+@media only screen and (max-width: 700px) and (orientation: landscape) {
+	.editor-title {
+		font-size: .9rem;
+	}
+	.editor-button {
+		font-size: .7rem;
+	}
+	// Hide button labels to fit in narrow landscape view
+	.button-label {
+		display: none;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.editor-button {
+		font-size: .9rem;
 	}
 }

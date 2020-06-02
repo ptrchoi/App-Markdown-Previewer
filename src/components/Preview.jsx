@@ -6,9 +6,13 @@ class Preview extends React.Component {
 		return (
 			<div className="preview-container">
 				<div className="preview">
-					<h3 className="preview-header">
-						<i className="far fa-eye header-icon" /> Live Preview
-					</h3>
+					<div className="preview-header">
+						<div className="preview-title">
+							<h3>
+								<i className="far fa-eye header-icon" /> Live Preview
+							</h3>
+						</div>
+					</div>
 					<div id="preview" dangerouslySetInnerHTML={{ __html: markedText }} className="preview-body" />
 				</div>
 			</div>

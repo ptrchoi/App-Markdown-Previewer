@@ -96,20 +96,24 @@ if (test === true) {
 		return (
 			<div className="editor-container">
 				<div className="editor">
-					<h3 className="editor-header">
-						<i className="far fa-edit header-icon" /> Editor
+					<div className="editor-header">
+						<div className="editor-title">
+							<h3>
+								<i className="far fa-edit header-icon" /> Editor
+							</h3>
+						</div>
 						<div className="button-container">
-							<button id="clearBtn" className="editor-button" onClick={this.clearContent}>
-								<i className="far fa-file" /> <span className="button-label">clear</span>
+							<button id="resetBtn" className="editor-button" onClick={this.resetContent}>
+								<i className="fas fa-history" /> <span className="button-label">reset</span>
 							</button>
 							<button id="copyBtn" className="editor-button" onClick={this.copyContent}>
 								<i className="far fa-copy" /> <span className="button-label">copy</span>
 							</button>
-							<button id="resetBtn" className="editor-button" onClick={this.resetContent}>
-								<i className="fas fa-history" /> <span className="button-label">reset</span>
+							<button id="clearBtn" className="editor-button" onClick={this.clearContent}>
+								<i className="far fa-file" /> <span className="button-label">clear</span>
 							</button>
 						</div>
-					</h3>
+					</div>
 					<textarea
 						id="editor"
 						ref="inputText"
