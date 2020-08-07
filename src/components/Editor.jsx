@@ -44,7 +44,7 @@ _You **can** combine them_
 	1. Item 3b
 
 ### Images
-<img src="https://goo.gl/Umyytc" width="240" height="240">
+<img src="https://techchronos.com/wp-content/uploads/SszarkLabs/stack-icon/cywBkaGwkMeDAuJbSt1k.png" width="240" height="240">
 
 ### Links
 <a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf" target=_blank>Click to find out more</a>
